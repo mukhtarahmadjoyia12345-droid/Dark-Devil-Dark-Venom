@@ -15,7 +15,7 @@ async function startBot() {
     if (!sock.authState.creds.registered) {
         const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
         console.log("⚡ DARK SYSTEM STARTING... ⚡");
-        const phoneNumber = await new Promise(resolve => rl.question('Number (+ Country Code) enter karein: ', resolve));
+        const phoneNumber = await new Promise(resolve => rl.question('Number (+923098047638) enter karein: ', resolve));
         const code = await sock.requestPairingCode(phoneNumber);
         console.log(`\n🔥 YOUR PAIRING CODE: ${code}\n`);
     }
